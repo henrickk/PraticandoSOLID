@@ -68,7 +68,5 @@ class Program
 
         var servicoSMS = new ServicoNotificacao(new NotificacaoSmsService());
         servicoSMS.Processar("11987654321", "Seu pedido foi enviado!");
-
-        Console.WriteLine("TESTE");
     }
 }
