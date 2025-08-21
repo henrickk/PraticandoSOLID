@@ -3,7 +3,7 @@ using PraticandoSOLID._2_OCP.OCP.Solucao;
 using PraticandoSOLID._3_LSP.LSP.Solucao;
 using PraticandoSOLID._4_ISP.ISP.Solucao;
 using PraticandoSOLID._4_ISP.ISP.Solucao.Interfaces;
-
+using PraticandoSOLID._5_DIP.DIP.DIP.solucao;
 
 class Program
 {
@@ -63,6 +63,10 @@ class Program
 
         // =================
         // Exemplo de uso do DIP
+        var servicoEmail = new ServicoNotificacao(new NotificacaoEmailService());
+        servicoEmail.Processar("cliente@teste.com", "Seu pedido foi confirmado!");
 
+        var servicoSMS = new ServicoNotificacao(new NotificacaoSmsService());
+        servicoSMS.Processar("11987654321", "Seu pedido foi enviado!");
     }
 }
